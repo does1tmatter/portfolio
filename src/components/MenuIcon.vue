@@ -8,7 +8,6 @@
 
 <script>
 export default {
-  name: 'MenuIcon',
   props: {
     menuOpen: {
       type: Boolean,
