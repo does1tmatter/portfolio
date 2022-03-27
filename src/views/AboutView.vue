@@ -15,7 +15,7 @@ const sampleText = 'Hello mister. My name is what so ever and I want you to invi
 const scroll = useWindowScroll()
 
 const makeScrollingFunAgain = computed(() => scroll.y.value < 200 ? scroll.y.value / 5 : 40)
-const specialScroll = computed(() => scroll.y.value / 5 || 0)
+const specialScroll = computed(() => scroll.y.value / 3 || 0)
 </script>
 
 <template>
@@ -36,7 +36,7 @@ const specialScroll = computed(() => scroll.y.value / 5 || 0)
           </p>
         </div>
       </div>
-      <div class="flex-1 max-w-[500px] min-h-[700px] rounded-[50px] overflow-hidden order-1 lg:order-2 shadow-xl shadow-angry/[.2]">
+      <div class="flex-1 max-w-[500px] min-h-[700px] rounded-[50px] bg-[#1E1E26] overflow-hidden order-1 lg:order-2 shadow-xl shadow-angry/[.2]">
         <div class="min-w-[1000px] min-h-[1200px] bg-cover bg-center" :style="{
           backgroundImage: `url( ${bgImage} )`,
           transform: `translateX(-${specialScroll}px)`
