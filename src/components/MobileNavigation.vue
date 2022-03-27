@@ -1,13 +1,11 @@
 <script setup>
 import { computed, ref } from 'vue'
-import { RouterLink, useRouter, useRoute } from 'vue-router'
+import { RouterLink, useRouter } from 'vue-router'
 import MenuIcon from '@/components/MenuIcon.vue'
 
 const { getRoutes } = useRouter()
-const route = useRoute()
 
 const navLinks = getRoutes()
-const pageName = computed(() => route.name || 'blank')
 const menuOpen = ref(false)
 </script>
 
