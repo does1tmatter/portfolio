@@ -13,7 +13,7 @@ const menuOpen = ref(false)
 </script>
 
 <template>
-  <div class="fixed top-0 left-0 z-40 w-full flex lg:hidden items-center justify-between px-12 py-6 bg-gradient-to-b from-skywhite to-white/[.2] backdrop-blur-md">
+  <div class="fixed top-0 left-0 z-40 w-full flex lg:hidden items-center justify-between px-12 py-6 bg-skywhite/[.2] backdrop-blur-md">
     <div>
       <div class="inline-block font-black text-[32px] cursor-pointer hover:text-blueone transition-all duration-500 select-none">
         <RouterLink to="/">
