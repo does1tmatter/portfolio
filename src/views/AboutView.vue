@@ -15,7 +15,7 @@ const sampleText = 'Hello mister. My name is what so ever and I want you to invi
 const scroll = useWindowScroll()
 
 const makeScrollingFunAgain = computed(() => scroll.y.value < 200 ? scroll.y.value / 5 : 40)
-const specialScroll = computed(() => scroll.y.value / 3 || 0)
+const specialScroll = computed(() => scroll.y.value / 2 || 0)
 </script>
 
 <template>
@@ -34,12 +34,15 @@ const specialScroll = computed(() => scroll.y.value / 3 || 0)
           }">
             Vivamus sem lacus, lacinia vel lacinia non, tincidunt quis eros. Morbi tempor sapien et metus aliquam, eu hendrerit ipsum mollis. Cras eu leo vel magna vestibulum vestibulum. Duis purus enim, sagittis nec dapibus quis, lacinia nec magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel fermentum lorem
           </p>
+          <div>
+            {{ specialScroll }}
+          </div>
         </div>
       </div>
-      <div class="flex-1 max-w-[500px] min-h-[700px] rounded-[50px] bg-[#1E1E26] overflow-hidden order-1 lg:order-2 shadow-xl shadow-angry/[.2]">
+      <div class="flex-1 max-w-[500px] max-h-[950px] rounded-[50px] bg-[#1E1E26] overflow-hidden order-1 lg:order-2 shadow-xl shadow-angry/[.2]">
         <div class="min-w-[1000px] min-h-[1200px] bg-cover bg-center" :style="{
           backgroundImage: `url( ${bgImage} )`,
-          transform: `translateX(-${specialScroll}px)`
+          transform: `translateX(-${specialScroll}px) translateY(-105px)`
         }">
         </div>
       </div>
