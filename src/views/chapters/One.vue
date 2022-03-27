@@ -16,7 +16,7 @@ const { tilt, roll } = useParallax(parallaxCont)
   <div ref="parallaxCont" class="mt-24 flex flex-col lg:flex-row gap-[50px] pb-16">
     <!-- <div class="min-h-[50px] min-w-[550px] bg-angry rounded-[50px]">
     </div> -->
-    <div class="min-h-[700px] flex-1 sm:max-w-[550px] bg-angry rounded-[50px] bg-cover bg-center shadow-xl shadow-orange-500/[.1]" :style="{
+    <div class="min-h-[700px] flex-1 sm:max-w-[550px] rounded-[50px] bg-cover bg-center shadow-xl shadow-orange-500/[.1]" :style="{
       backgroundImage: `url( ${bgImage} )`,
       transform: `translateY(${roll * 1}px) translateX(${tilt * 1}px)`
     }">
@@ -36,7 +36,7 @@ const { tilt, roll } = useParallax(parallaxCont)
         </div>
         <div class="mt-[30px] text-[24px] font-extralight text-justify">
           AwesomeApples create spaces for artists (and those who appreciate art) to connect in the world of NFTs & Web3.
-AwesomeApples believe there's a place for everyone in Web3, and here to help you find yours - and cheer for you along the way.
+          AwesomeApples believe there's a place for everyone in Web3, and here to help you find yours - and cheer for you along the way.
         </div>
         <div class="mt-[50px]">
           <a href="http://awesomeapples.io" target="_blank">
@@ -51,12 +51,12 @@ AwesomeApples believe there's a place for everyone in Web3, and here to help you
           </a>
         </div>
         <div class="flex gap-[20px] md:gap-[50px]">
-          <div class="flex-1 min-h-[350px] bg-angry rounded-[25px] mt-[97px] shadow-xl shadow-orange-500/[.1] bg-cover bg-center" :style="{
+          <div class="flex-1 min-h-[350px] rounded-[25px] mt-[97px] shadow-xl shadow-orange-500/[.1] bg-cover bg-center" :style="{
             backgroundImage: `url( ${tab1} )`,
             transform: `translateY(${roll * 2}px) translateX(${tilt * 2}px)`
           }">
           </div>
-          <div class="flex-1 min-h-[350px] bg-angry rounded-[25px] mt-[97px] shadow-xl shadow-orange-500/[.1] bg-cover bg-center" :style="{
+          <div class="flex-1 min-h-[350px] rounded-[25px] mt-[97px] shadow-xl shadow-orange-500/[.1] bg-cover bg-center" :style="{
             backgroundImage: `url( ${tab2} )`,
             transform: `translateY(${roll * 2}px) translateX(${tilt * 2}px)`
           }">
