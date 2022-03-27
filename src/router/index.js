@@ -53,7 +53,14 @@ const router = createRouter({
         next: null
       }
     }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve({ left: 0, top: 0 })
+      }, 300)
+    })
+  }
 })
 
 export default router
