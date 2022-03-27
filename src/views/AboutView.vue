@@ -1,5 +1,6 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+import { useScroll } from '@vueuse/core'
 import { AtSymbolIcon, HashtagIcon, CameraIcon } from '@heroicons/vue/solid'
 import SickButton from '@/components/SickButton.vue'
 import MySocials from '@/components/MySocials.vue'
@@ -9,6 +10,12 @@ const subject = ref(null)
 const message = ref(null)
 
 const sampleText = 'Hello mister. My name is what so ever and I want you to invite to work at what so ever. You know just sample text to keep picture as a whole.'
+
+const scrollCont = ref(window)
+
+const scroll = useScroll(scrollCont)
+
+const makeScrollingFunAgain = computed(() => scroll.y.value < 200 ? scroll.y.value / 5 : 40)
 </script>
 
 <template>
@@ -22,15 +29,21 @@ const sampleText = 'Hello mister. My name is what so ever and I want you to invi
           <div class="font-extralight text-[40px] leading-none -mt-[10px] uppercase">
             me
           </div>
-          <p class="text-[24px] font-extralight text-justify mt-[100px]">
+          <p class="text-[24px] font-extralight text-justify mt-[100px]" :style="{
+            transform: `translateY(-${makeScrollingFunAgain * 2}px)`
+          }">
             Vivamus sem lacus, lacinia vel lacinia non, tincidunt quis eros. Morbi tempor sapien et metus aliquam, eu hendrerit ipsum mollis. Cras eu leo vel magna vestibulum vestibulum. Duis purus enim, sagittis nec dapibus quis, lacinia nec magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel fermentum lorem
           </p>
         </div>
       </div>
-      <div class="flex-1 max-w-[500px] min-h-[700px] bg-angry rounded-[50px] order-1 lg:order-2">
+      <div class="flex-1 max-w-[500px] min-h-[700px] bg-angry rounded-[50px] order-1 lg:order-2" :style="{
+          transform: `translateY(-${makeScrollingFunAgain / 2}px)`
+        }">
       </div>
     </div>
-    <div class="mt-24 flex flex-wrap lg:flex-nowrap gap-0 md:gap-[20px] lg:gap-[170px] justify-around">
+    <div class="mt-24 flex flex-wrap lg:flex-nowrap gap-0 md:gap-[20px] lg:gap-[170px] justify-around" :style="{
+      transform: `translateY(-${makeScrollingFunAgain * 2}px)`
+    }">
       <div class="text-right mb-16">
         <div class="font-black text-[96px] leading-none tracking-[-0.12em] uppercase">
           contact
