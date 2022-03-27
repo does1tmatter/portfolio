@@ -39,7 +39,7 @@ const makeScrollingFunAgain = computed(() => scroll.y.value < 300 ? scroll.y.val
         }">
           LOWEFFORTNOUNS
         </div>
-        <div class="mt-[30px] text-[24px] font-extralight text-justify" :style="{
+        <div class="mt-[80px] text-[24px] font-extralight text-justify" :style="{
           transform: `translateY(-${makeScrollingFunAgain / 4}px)`
         }">
           Low Effort Nouns are 5635 digital characters, each with hand drawn characteristics born on the blockchain. Each of the traits were made in one minute each without care.

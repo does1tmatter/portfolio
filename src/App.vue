@@ -19,7 +19,7 @@ const routeProps = computed(() => route?.matched[0]?.props.default || null)
           </button>
         </RouterLink>
     </div>
-    <div class="w-full self-start">
+    <div class="self-start">
       <DesktopNavigation />
       <RouterView v-slot="{ Component }" class="w-full">
         <Transition name="slide-fade">

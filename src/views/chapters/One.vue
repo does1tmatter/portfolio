@@ -13,8 +13,6 @@ const makeScrollingFunAgain = computed(() => scroll.y.value < 300 ? scroll.y.val
 
 <template>
   <div class="mt-24 flex flex-col lg:flex-row gap-[50px]">
-    <!-- <div class="min-h-[50px] min-w-[550px] bg-angry rounded-[50px]">
-    </div> -->
     <div class="min-h-[700px] flex-1 sm:max-w-[550px] rounded-[50px] shadow-xl shadow-orange-500/[.1] relative bg-white overflow-hidden" :style="{
       transform: `translateY(-${makeScrollingFunAgain * 3}px)`
     }">
