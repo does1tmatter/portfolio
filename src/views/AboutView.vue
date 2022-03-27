@@ -4,6 +4,7 @@ import { useWindowScroll } from '@vueuse/core'
 import { AtSymbolIcon, HashtagIcon, CameraIcon } from '@heroicons/vue/solid'
 import SickButton from '@/components/SickButton.vue'
 import MySocials from '@/components/MySocials.vue'
+import bgImage from '@/assets/about.jpg'
 
 const email = ref(null)
 const subject = ref(null)
@@ -14,6 +15,7 @@ const sampleText = 'Hello mister. My name is what so ever and I want you to invi
 const scroll = useWindowScroll()
 
 const makeScrollingFunAgain = computed(() => scroll.y.value < 200 ? scroll.y.value / 5 : 40)
+const specialScroll = computed(() => scroll.y.value / 5 || 0)
 </script>
 
 <template>
@@ -34,9 +36,12 @@ const makeScrollingFunAgain = computed(() => scroll.y.value < 200 ? scroll.y.val
           </p>
         </div>
       </div>
-      <div class="flex-1 max-w-[500px] min-h-[700px] bg-angry rounded-[50px] order-1 lg:order-2" :style="{
-          transform: `translateY(-${makeScrollingFunAgain / 2}px)`
+      <div class="flex-1 max-w-[500px] min-h-[700px] rounded-[50px] overflow-hidden order-1 lg:order-2 shadow-xl shadow-angry/[.2]">
+        <div class="min-w-[1000px] min-h-[1200px] bg-cover bg-center" :style="{
+          backgroundImage: `url( ${bgImage} )`,
+          transform: `translateX(-${specialScroll}px)`
         }">
+        </div>
       </div>
     </div>
     <div class="mt-24 flex flex-wrap lg:flex-nowrap gap-0 md:gap-[20px] lg:gap-[170px] justify-around" :style="{
