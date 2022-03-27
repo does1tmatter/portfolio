@@ -19,9 +19,6 @@ const menuOpen = ref(false)
           angrybud
         </RouterLink>
       </div>
-      <div class="hidden sm:inline-block ml-[10vw] font-light text-[16px] uppercase opacity-40">
-        {{ pageName }}
-      </div>
     </div>
     <MenuIcon :menu-open="menuOpen" class="w-[35px] cursor-pointer hover:scale-110 transition-all duration-500 z-50" @click="menuOpen = !menuOpen" />
     <div :class="menuOpen ? 'overflow-hidden fixed top-0 right-0 w-[30vw] h-screen bg-angry text-white text-center z-40 transition-all duration-[700ms]' : 'overflow-hidden fixed top-0 right-0 w-[30vw] h-0 bg-angry text-white text-center z-40 transition-all duration-300'">
