@@ -6,7 +6,7 @@ import Arrow from '@/components/Arrow.vue'
 
 const route = useRoute()
 
-const routeProps = computed(() => route?.matched[0]?.props.default || null)
+const routeProps = computed(() => route.matched[0].props.default || null)
 
 </script>
 
