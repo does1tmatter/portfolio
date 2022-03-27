@@ -41,7 +41,7 @@ const routeProps = computed(() => route?.matched[0]?.props.default || null)
 @import '@/assets/base.css';
 .slide-fade-enter-active {
   transition: all 0.3s ease-in-out;
-  transition-delay: 0.4s;
+  transition-delay: 0.3s;
 }
 
 .slide-fade-leave-active {
