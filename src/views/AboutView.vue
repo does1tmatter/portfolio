@@ -34,9 +34,6 @@ const specialScroll = computed(() => scroll.y.value / 2 || 0)
           }">
             Vivamus sem lacus, lacinia vel lacinia non, tincidunt quis eros. Morbi tempor sapien et metus aliquam, eu hendrerit ipsum mollis. Cras eu leo vel magna vestibulum vestibulum. Duis purus enim, sagittis nec dapibus quis, lacinia nec magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel fermentum lorem
           </p>
-          <div>
-            {{ specialScroll }}
-          </div>
         </div>
       </div>
       <div class="flex-1 max-w-[500px] max-h-[950px] rounded-[50px] bg-[#1E1E26] overflow-hidden order-1 lg:order-2 shadow-xl shadow-angry/[.2]">
