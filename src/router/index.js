@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import Chapter1 from '../views/chapters/One.vue'
+import Chapter2 from '../views/chapters/Two.vue'
+import Chapter3 from '../views/chapters/Three.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -21,6 +23,24 @@ const router = createRouter({
       component: Chapter1,
       props: {
         prev: '/',
+        next: '/chapter2'
+      }
+    },
+    {
+      path: '/chapter2',
+      name: 'ch 2',
+      component: Chapter2,
+      props: {
+        prev: '/chapter1',
+        next: '/chapter3'
+      }
+    },
+    {
+      path: '/chapter3',
+      name: 'ch 3',
+      component: Chapter3,
+      props: {
+        prev: '/chapter2',
         next: '/about'
       }
     },
@@ -29,7 +49,7 @@ const router = createRouter({
       name: 'about',
       component: AboutView,
       props: {
-        prev: '/chapter1',
+        prev: '/chapter3',
         next: null
       }
     }
