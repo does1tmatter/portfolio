@@ -10,7 +10,7 @@ const pageName = computed(() => route.name || 'blank')
 </script>
 
 <template>
-  <div class="flex h-[102px] items-end">
+  <div class="hidden lg:flex h-[102px] items-end">
     <div>
       <div class="inline-block font-black text-[32px] cursor-pointer hover:text-blueone transition-all duration-500 select-none">
         <RouterLink to="/">

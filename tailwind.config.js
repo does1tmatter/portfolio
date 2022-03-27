@@ -10,7 +10,8 @@ module.exports = {
       },
       colors: {
         angry: '#0E1116',
-        blueone: '#1A5CFF'
+        blueone: '#1A5CFF',
+        skywhite: '#FAFFFF'
       }
     },
   },

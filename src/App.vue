@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { RouterLink, RouterView, useRoute } from 'vue-router'
 import DesktopNavigation from '@/components/DesktopNavigation.vue'
+import MobileNavigation from '@/components/MobileNavigation.vue'
 import Arrow from '@/components/Arrow.vue'
 
 const route = useRoute()
@@ -19,9 +20,10 @@ const routeProps = computed(() => route?.matched[0]?.props.default || null)
           </button>
         </RouterLink>
     </div>
-    <div class="self-start">
+    <div class="self-start flex-1">
+      <MobileNavigation />
       <DesktopNavigation />
-      <RouterView v-slot="{ Component }" class="w-full">
+      <RouterView v-slot="{ Component }">
         <Transition name="slide-fade">
           <Component :is="Component" />
         </Transition>
