@@ -1,19 +1,20 @@
 <script setup>
+import { computed } from 'vue'
 import { RouterLink, RouterView, useRoute } from 'vue-router'
 import DesktopNavigation from '@/components/DesktopNavigation.vue'
 import Arrow from '@/components/Arrow.vue'
-import { onMounted, computed } from 'vue'
 
 const route = useRoute()
 
-const routeProps = computed(() => route.matched[0].props.default || null)
+const routeProps = computed(() => route?.matched[0]?.props.default || null)
+
 </script>
 
 <template>
   <div class="flex items-center gap-[150px] min-h-screen px-6">
     <div class="fixed top-0 left-[5%] min-w-[80px] h-screen hidden 2xl:flex items-center justify-end">
-        <RouterLink :to="routeProps.prev ? routeProps.prev : ''">
-          <button class="transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-10 hover:scale-110 disabled:hover:scale-100" :disabled="!routeProps.prev">
+        <RouterLink :to="routeProps?.prev ? routeProps.prev : ''">
+          <button class="transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-10 hover:scale-110 disabled:hover:scale-100" :disabled="!routeProps?.prev">
             <Arrow class="rotate-180" />
           </button>
         </RouterLink>
@@ -27,8 +28,8 @@ const routeProps = computed(() => route.matched[0].props.default || null)
       </RouterView>
     </div>
     <div class="fixed top-0 right-[5%] min-w-[80px] h-screen hidden 2xl:flex items-center">
-        <RouterLink :to="routeProps.next || ''">
-          <button class="transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-10 hover:scale-110 disabled:hover:scale-100" :disabled="!routeProps.next">
+        <RouterLink :to="routeProps?.next || ''">
+          <button class="transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-10 hover:scale-110 disabled:hover:scale-100" :disabled="!routeProps?.next">
             <Arrow />
           </button>
         </RouterLink>

@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed } from 'vue'
-import { useScroll } from '@vueuse/core'
+import { useWindowScroll } from '@vueuse/core'
 import { AtSymbolIcon, HashtagIcon, CameraIcon } from '@heroicons/vue/solid'
 import SickButton from '@/components/SickButton.vue'
 import MySocials from '@/components/MySocials.vue'
@@ -11,9 +11,7 @@ const message = ref(null)
 
 const sampleText = 'Hello mister. My name is what so ever and I want you to invite to work at what so ever. You know just sample text to keep picture as a whole.'
 
-const scrollCont = ref(window)
-
-const scroll = useScroll(scrollCont)
+const scroll = useWindowScroll()
 
 const makeScrollingFunAgain = computed(() => scroll.y.value < 200 ? scroll.y.value / 5 : 40)
 </script>

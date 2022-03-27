@@ -1,9 +1,8 @@
 <script setup>
-import { ref, computed } from 'vue'
-import { useScroll } from '@vueuse/core'
+import { computed } from 'vue'
+import { useWindowScroll } from '@vueuse/core'
 
-const scrollCont = ref(window)
-const scroll = useScroll(scrollCont)
+const scroll = useWindowScroll()
 
 const makeScrollingFunAgain = computed(() => scroll.y.value < 200 ? scroll.y.value / 5 : 40)
 </script>
