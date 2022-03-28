@@ -17,7 +17,7 @@ const sampleText = 'Hello mister. My name is what so ever and I want you to invi
 
 <template>
   <div>
-    <div class="mt-24 flex flex-col gap-[30px] lg:flex-row lg:gap-[100px] justify-around">
+    <div class="lg:mt-24 flex flex-col gap-[30px] lg:flex-row lg:gap-[100px] justify-around">
       <div class="flex-1 text-right order-2 lg:order-1">
         <div>
           <div class="font-black text-[96px] leading-none tracking-[-0.12em] uppercase">

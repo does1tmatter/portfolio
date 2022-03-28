@@ -14,7 +14,7 @@ const { scrollerLimited, scrollerFast } = useScrolling()
 </script>
 
 <template>
-  <div class="mt-24 flex flex-col lg:flex-row gap-[50px]">
+  <div class="lg:mt-24 flex flex-col lg:flex-row gap-[50px]">
     <div class="min-h-[700px] flex-1 sm:max-w-[550px] rounded-[50px] shadow-xl shadow-[#FF5A10]/[.1] relative bg-transparent overflow-hidden" :style="{
       transform: `translateY(-${scrollerLimited * 3}px)`
     }">

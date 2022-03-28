@@ -9,7 +9,7 @@ const { scrollerLimited } = useScrolling()
 
 <template>
   <div class="pb-16 w-full">
-    <div class="flex flex-wrap gap-[50px] mt-[150px]">
+    <div class="flex flex-wrap gap-[50px] lg:mt-[150px]">
       <div class="min-w-[550px] min-h-[350px] rounded-[50px] hidden lg:block bg-cover bg-center shadow-xl shadow-[#FF5A10]/[.2]" :style="{
         backgroundImage: `url( ${tab1} )`
       }">
