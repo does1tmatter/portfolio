@@ -59,7 +59,7 @@ const { Lightbox, show, activeImage, openImage, closeImage } = useLightbox()
             </SickButton>
           </a>
         </div>
-        <div class="flex gap-[20px] md:gap-[50px] mt-[97px]" :style="{
+        <div class="md:flex md:gap-[50px] mt-[97px]" :style="{
           transform: `translateY(-${scrollerLimited * 3}px)`
         }">
           <div class="flex-1 relative min-h-[350px] rounded-[25px] bg-white shadow-xl shadow-orange-500/[.1] overflow-hidden cursor-pointer">
@@ -69,7 +69,7 @@ const { Lightbox, show, activeImage, openImage, closeImage } = useLightbox()
             }" @click="openImage(tab1)">
             </div>
           </div>
-          <div class="flex-1 relative min-h-[350px] rounded-[25px] bg-white shadow-xl shadow-orange-500/[.1] overflow-hidden cursor-pointer">
+          <div class="flex-1 mt-[70px] md:mt-0 relative min-h-[350px] rounded-[25px] bg-white shadow-xl shadow-orange-500/[.1] overflow-hidden cursor-pointer">
             <div class="min-h-[500px] w-full bg-cover bg-center absolute top-0 left-0" :style="{
               backgroundImage: `url( ${tab2} )`,
               transform: `translateY(-${scrollerLimited}px)`
