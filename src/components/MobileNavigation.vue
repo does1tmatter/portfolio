@@ -39,5 +39,6 @@ const menuOpen = ref(false)
 .router-link-active {
   transition: opacity 0.6s ease-in-out;
   opacity: 100% !important;
+  pointer-events: none !important;
 }
 </style>
