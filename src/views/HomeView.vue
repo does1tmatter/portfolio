@@ -27,7 +27,7 @@ const { scrollerLimited } = useScrolling()
         </div>
       </div>
     </div>
-    <div class="w-full max-w-[1000px] mt-[120px] max-h-[300px] rounded-[50px] overflow-hidden shadow-xl shadow-black/[.2] ml-auto" :style="{
+    <div class="w-full max-w-[1000px] mt-[120px] max-h-[300px] rounded-[30px] md:rounded-[50px] overflow-hidden shadow-xl shadow-black/[.2] ml-auto" :style="{
       transform: `translateY(-${scrollerLimited * 2}px)`
     }">
       <div class="w-full max-w-[1000px] min-h-[500px] bg-cover bg-center" :style="{

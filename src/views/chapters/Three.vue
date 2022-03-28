@@ -15,7 +15,7 @@ const { Lightbox, show, activeImage, openImage, closeImage } = useLightbox()
 
 <template>
   <div class="lg:mt-24 flex flex-col lg:flex-row gap-[50px]">
-    <div class="min-h-[700px] flex-1 sm:max-w-[550px] rounded-[50px] shadow-xl shadow-[#D53D5F]/[.2] relative bg-[#E3DEDC] overflow-hidden cursor-pointer" :style="{
+    <div class="min-h-[700px] flex-1 sm:max-w-[550px] rounded-[30px] md:rounded-[50px] shadow-xl shadow-[#D53D5F]/[.2] relative bg-[#E3DEDC] overflow-hidden cursor-pointer" :style="{
       transform: `translateY(-${scrollerLimited * 3}px)`
     }">
       <div class="min-h-[1200px] min-w-[800px] bg-cover bg-center absolute -top-[100px] -left-[170px] sm:-left-[125px]" :style="{

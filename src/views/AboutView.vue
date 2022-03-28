@@ -19,7 +19,7 @@ const message = ref(null)
 <template>
   <div>
     <div class="lg:mt-24 block lg:flex gap-[100px] justify-around">
-      <div class="min-h-[850px] min-w-[50px] sm:w-full max-w-[70wv] sm:max-w-[550px] rounded-[50px] shadow-xl shadow-[#1E1E26]/[.2] relative overflow-hidden order-2 cursor-pointer" :style="{
+      <div class="min-h-[850px] min-w-[50px] sm:w-full max-w-[70wv] sm:max-w-[550px] rounded-[30px] md:rounded-[50px] shadow-xl shadow-[#1E1E26]/[.2] relative overflow-hidden order-2 cursor-pointer" :style="{
         transform: `translateY(-${scrollerLimited * 3}px)`
       }">
         <div class="min-h-[1200px] min-w-[1480px] bg-cover bg-center absolute top-0 -left-[125px]" :style="{
