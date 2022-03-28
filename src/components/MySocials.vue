@@ -63,27 +63,3 @@ const discordId = 'angry bud#1335'
     </a>
   </div>
 </template>
-
-<style>
-.slide-button-enter-active {
-  transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
-  transition-delay: 0.2s;
-}
-
-.slide-button-leave-active {
-  position:absolute;
-  transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
-}
-
-.slide-button-enter-from {
-  transform: translateY(-20px);
-}
-.slide-button-leave-to {
-  transform: translateY(20px);
-}
-
-.slide-button-enter-from,
-.slide-button-leave-to {
-  opacity: 0;
-}
-</style>

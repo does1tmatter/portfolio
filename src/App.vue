@@ -40,34 +40,6 @@ const routeProps = computed(() => route?.matched[0]?.props.default || null)
 </template>
 
 <style>
-@import '@/assets/base.css';
-.slide-fade-enter-active {
-  transition: all 0.3s ease-in-out;
-  transition-delay: 0.3s;
-}
-
-.slide-fade-leave-active {
-  transition: all 0.3s ease-in-out;
-}
-
-.slide-fade-enter-from {
-  transform: translateY(200px);
-}
-.slide-fade-leave-to {
-  transform: translateY(-200px);
-}
-
-.slide-fade-enter-from,
-.slide-fade-leave-to {
-  opacity: 0;
-}
-
-@media only screen and (min-width: 1536px) {
-  .slide-fade-enter-from {
-    transform: translateX(-150px);
-  }
-  .slide-fade-leave-to {
-    transform: translateX(100px);
-  }
-}
+@import '@/assets/css/base.css';
+@import '@/assets/css/transitions.css';
 </style>

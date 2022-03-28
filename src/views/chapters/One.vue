@@ -15,13 +15,13 @@ const { scrollerLimited, scrollerFast } = useScrolling()
 
 <template>
   <div class="lg:mt-24 flex flex-col lg:flex-row gap-[50px]">
-    <div class="min-h-[700px] flex-1 sm:max-w-[550px] rounded-[50px] shadow-xl shadow-[#FF5A10]/[.1] relative bg-transparent overflow-hidden" :style="{
+    <div class="min-h-[700px] flex-1 sm:max-w-[550px] rounded-[50px] shadow-xl shadow-[#FF5A10]/[.1] relative bg-transparent overflow-hidden cursor-pointer" :style="{
       transform: `translateY(-${scrollerLimited * 3}px)`
     }">
       <div class="min-h-[1000px] min-w-[1000px] bg-cover bg-center absolute top-0 -left-[170px] sm:-left-[100px]" :style="{
         backgroundImage: `url( ${bgImage} )`,
         transform: `translateX(-${scrollerFast}px) translateY(-40px)`
-      }">
+      }" @click="openImage(bgImage)">
       </div>
     </div>
     <div class="text-left flex-1">
@@ -62,23 +62,25 @@ const { scrollerLimited, scrollerFast } = useScrolling()
         <div class="flex gap-[20px] md:gap-[50px] mt-[97px]" :style="{
           transform: `translateY(-${scrollerLimited * 3}px)`
         }">
-          <div class="flex-1 relative min-h-[350px] rounded-[25px] bg-white shadow-xl shadow-orange-500/[.1] overflow-hidden">
+          <div class="flex-1 relative min-h-[350px] rounded-[25px] bg-white shadow-xl shadow-orange-500/[.1] overflow-hidden cursor-pointer">
             <div class="w-full min-h-[500px] bg-cover bg-center absolute top-0 left-0" :style="{
               backgroundImage: `url( ${tab1} )`,
               transform: `translateY(-${scrollerLimited * 2}px)`
-            }">
+            }" @click="openImage(tab1)">
             </div>
           </div>
-          <div class="flex-1 relative min-h-[350px] rounded-[25px] bg-white shadow-xl shadow-orange-500/[.1] overflow-hidden">
+          <div class="flex-1 relative min-h-[350px] rounded-[25px] bg-white shadow-xl shadow-orange-500/[.1] overflow-hidden cursor-pointer">
             <div class="min-h-[500px] w-full bg-cover bg-center absolute top-[50px] left-0" :style="{
               backgroundImage: `url( ${tab2} )`,
               transform: `translateY(-${scrollerLimited}px)`
-            }">
+            }" @click="openImage(tab2)">
             </div>
           </div>
         </div>
       </div>
     </div>
-    <Lightbox v-if="show" :image="activeImage" @hide-lightbox="closeBox()" />
+    <transition name="slide-box">
+      <Lightbox v-if="show" :image="activeImage" @hide-lightbox="closeImage()" />
+    </transition>
   </div>
 </template>

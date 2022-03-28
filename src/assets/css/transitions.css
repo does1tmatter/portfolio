@@ -1,0 +1,73 @@
+/* LIGHTBOX /  slide-box  / */
+.slide-box-leave-active,
+.slide-box-enter-active {
+  transition: all 0.3s ease-in-out;
+}
+
+.slide-box-enter-from,
+.slide-box-leave-to {
+  opacity: 0;
+}
+
+.slide-box-enter-from {
+  transform: translateY(200px);
+}
+.slide-box-leave-to {
+  transform: translateY(-200px);
+}
+
+/* slide-fade */
+
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.3s ease-in-out;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  opacity: 0;
+}
+
+.slide-fade-enter-active {
+  transition-delay: 0.3s;
+}
+
+.slide-fade-enter-from {
+  transform: translateY(200px);
+}
+.slide-fade-leave-to {
+  transform: translateY(-200px);
+}
+
+@media only screen and (min-width: 1536px) {
+  .slide-fade-enter-from {
+    transform: translateX(-150px);
+  }
+  .slide-fade-leave-to {
+    transform: translateX(100px);
+  }
+}
+
+/* slide-button */
+
+.slide-button-enter-active {
+  transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
+  transition-delay: 0.2s;
+}
+
+.slide-button-leave-active {
+  position:absolute;
+  transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-button-enter-from {
+  transform: translateY(-20px);
+}
+.slide-button-leave-to {
+  transform: translateY(20px) ;
+}
+
+.slide-button-enter-from,
+.slide-button-leave-to {
+  opacity: 0;
+}
