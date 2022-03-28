@@ -26,15 +26,15 @@ const { Lightbox, show, activeImage, openImage, closeImage } = useLightbox()
     </div>
     <div class="text-left flex-1">
       <div class="max-w-max">
-        <div class="font-extralight text-[40px] leading-[0.6] tracking-[-0.12em] uppercase text-right pr-2">
+        <div class="font-extralight text-[6vw] pb-1 md:pb-0 md:text-[40px] leading-[0.6] tracking-[-0.12em] uppercase text-right pr-2">
           chapter
         </div>
-        <div class="font-black text-[96px] leading-none -mt-[10px] uppercase">
+        <div class="font-black text-[14vw] md:text-[96px] leading-none -mt-[10px] uppercase">
           three
         </div>
       </div>
       <div class="mt-[25px]">
-        <div class="font-extralight text-[40px] leading-none uppercase text-right" :style="{
+        <div class="font-extralight text-[8vw] md:text-[40px] leading-none uppercase text-right" :style="{
           transform: `translateY(-${scrollerLimited}px)`
         }">
           LOWEFFORTNOUNS
