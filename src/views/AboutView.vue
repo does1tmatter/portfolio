@@ -1,21 +1,18 @@
 <script setup>
 import { ref, computed } from 'vue'
-import { useWindowScroll } from '@vueuse/core'
+import { useScrolling } from '@/composables/useScrolling'
 import { AtSymbolIcon, HashtagIcon, CameraIcon } from '@heroicons/vue/solid'
 import SickButton from '@/components/SickButton.vue'
 import MySocials from '@/components/MySocials.vue'
 import bgImage from '@/assets/about.jpg'
 
+const { scrollerLimited, scrollerFast } = useScrolling()
 const email = ref(null)
 const subject = ref(null)
 const message = ref(null)
 
 const sampleText = 'Hello mister. My name is what so ever and I want you to invite to work at what so ever. You know just sample text to keep picture as a whole.'
 
-const scroll = useWindowScroll()
-
-const makeScrollingFunAgain = computed(() => scroll.y.value < 200 ? scroll.y.value / 5 : 40)
-const specialScroll = computed(() => scroll.y.value / 2 + 70 || 70)
 </script>
 
 <template>
@@ -30,24 +27,24 @@ const specialScroll = computed(() => scroll.y.value / 2 + 70 || 70)
             me
           </div>
           <p class="text-[24px] font-extralight text-justify mt-[100px]" :style="{
-            transform: `translateY(-${makeScrollingFunAgain * 2}px)`
+            transform: `translateY(-${scrollerLimited * 2}px)`
           }">
             Vivamus sem lacus, lacinia vel lacinia non, tincidunt quis eros. Morbi tempor sapien et metus aliquam, eu hendrerit ipsum mollis. Cras eu leo vel magna vestibulum vestibulum. Duis purus enim, sagittis nec dapibus quis, lacinia nec magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel fermentum lorem
           </p>
         </div>
       </div>
       <div class="min-h-[950px] flex-1 sm:max-w-[550px] rounded-[50px] shadow-xl shadow-[#1E1E26]/[.2] relative overflow-hidden order-1 lg:order-2" :style="{
-        transform: `translateY(-${makeScrollingFunAgain * 3}px)`
+        transform: `translateY(-${scrollerLimited * 3}px)`
       }">
         <div class="min-h-[1200px] min-w-[1480px] bg-cover bg-center absolute top-0 left-0 sm:-left-[125px]" :style="{
           backgroundImage: `url( ${bgImage} )`,
-          transform: `translateX(-${specialScroll + 100}px) translateY(-105px)`
+          transform: `translateX(-${scrollerFast + 100}px) translateY(-105px)`
         }">
         </div>
       </div>
     </div>
     <div class="mt-24 flex flex-wrap lg:flex-nowrap gap-0 md:gap-[20px] lg:gap-[170px] justify-around" :style="{
-      transform: `translateY(-${makeScrollingFunAgain * 2}px)`
+      transform: `translateY(-${scrollerLimited * 2}px)`
     }">
       <div class="text-right mb-16">
         <div class="font-black text-[96px] leading-none tracking-[-0.12em] uppercase">
