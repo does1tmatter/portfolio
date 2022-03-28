@@ -9,6 +9,7 @@ import tab2 from '@/assets/chapters/3/tab2.jpg'
 
 const scroll = useWindowScroll()
 const makeScrollingFunAgain = computed(() => scroll.y.value < 300 ? scroll.y.value / 10 : 30)
+const specialScroll = computed(() => scroll.y.value / 2 || 0)
 </script>
 
 <template>
@@ -20,7 +21,7 @@ const makeScrollingFunAgain = computed(() => scroll.y.value < 300 ? scroll.y.val
     }">
       <div class="min-h-[1200px] min-w-[800px] bg-cover bg-center absolute -top-[100px] -left-[170px] sm:-left-[125px]" :style="{
         backgroundImage: `url( ${bgImage} )`,
-        transform: `translateY(-${makeScrollingFunAgain}px)`
+        transform: `translateY(-${specialScroll}px) translateX(35px)`
       }">
       </div>
     </div>
@@ -69,7 +70,7 @@ const makeScrollingFunAgain = computed(() => scroll.y.value < 300 ? scroll.y.val
             </div>
           </div>
           <div class="flex-1 relative min-h-[350px] rounded-[25px] bg-[#E3DEDC] shadow-xl shadow-[#D53D5F]/[.2] overflow-hidden">
-            <div class="min-h-[500px] w-full bg-cover bg-center absolute top-[50px] left-0" :style="{
+            <div class="min-h-[500px] w-full bg-cover bg-center absolute top-0 left-0" :style="{
               backgroundImage: `url( ${tab2} )`,
               transform: `translateY(-${makeScrollingFunAgain}px)`
             }">

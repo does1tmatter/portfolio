@@ -9,16 +9,17 @@ import tab2 from '@/assets/chapters/1/tab2.jpg'
 
 const scroll = useWindowScroll()
 const makeScrollingFunAgain = computed(() => scroll.y.value < 300 ? scroll.y.value / 10 : 30)
+const specialScroll = computed(() => scroll.y.value / 2 || 0)
 </script>
 
 <template>
   <div class="mt-24 flex flex-col lg:flex-row gap-[50px]">
-    <div class="min-h-[700px] flex-1 sm:max-w-[550px] rounded-[50px] shadow-xl shadow-orange-500/[.1] relative bg-white overflow-hidden" :style="{
+    <div class="min-h-[700px] flex-1 sm:max-w-[550px] rounded-[50px] shadow-xl shadow-[#FF5A10]/[.1] relative bg-transparent overflow-hidden" :style="{
       transform: `translateY(-${makeScrollingFunAgain * 3}px)`
     }">
-      <div class="min-h-[1000px] min-w-[800px] bg-cover bg-center absolute top-[50px] -left-[170px] sm:-left-[100px]" :style="{
+      <div class="min-h-[1000px] min-w-[1000px] bg-cover bg-center absolute top-0 -left-[170px] sm:-left-[100px]" :style="{
         backgroundImage: `url( ${bgImage} )`,
-        transform: `translateY(-${makeScrollingFunAgain}px)`
+        transform: `translateX(-${specialScroll}px) translateY(-40px)`
       }">
       </div>
     </div>
