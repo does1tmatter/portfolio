@@ -29,7 +29,7 @@ const makeScrollingFunAgain = computed(() => scroll.y.value < 200 ? scroll.y.val
         </div>
       </div>
     </div>
-    <div class="w-full max-w-[1000px] mt-[120px] max-h-[300px] rounded-[50px] overflow-hidden shadow-xl shadow-black/[.2]" :style="{
+    <div class="w-full max-w-[1000px] mt-[120px] max-h-[300px] rounded-[50px] overflow-hidden shadow-xl shadow-black/[.2] ml-auto" :style="{
       transform: `translateY(-${makeScrollingFunAgain * 2}px)`
     }">
       <div class="w-full max-w-[1000px] min-h-[500px] bg-cover bg-center" :style="{
