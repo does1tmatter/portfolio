@@ -24,7 +24,7 @@ const routeProps = computed(() => route?.matched[0]?.props.default || null)
       <MobileNavigation />
       <DesktopNavigation />
       <RouterView v-slot="{ Component }">
-        <Transition name="slide-fade">
+        <Transition name="slide-fade" mode="out-in">
           <Component :is="Component" />
         </Transition>
       </RouterView>
