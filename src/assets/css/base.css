@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scrollbar-gutter: 'stable';
+}
 
 ::-webkit-scrollbar {
   background: #0E1116;
