@@ -4,18 +4,19 @@
 
 html, body, .app {
   scrollbar-gutter: 'stable';
+  @apply scrollbar;
 }
 
-::-webkit-scrollbar {
+.scrollbar::-webkit-scrollbar {
   background: #0E1116;
   width: 10px;
 }
-::-webkit-scrollbar-track {
+.scrollbar::-webkit-scrollbar-track {
   background: #FAFFFF;
 }
-::-webkit-scrollbar-thumb {
+.scrollbar::-webkit-scrollbar-thumb {
   background: black;
 }
-::-webkit-scrollbar-thumb:hover {
+.scrollbar::-webkit-scrollbar-thumb:hover {
   background: rgb(54, 72, 187);
 }
